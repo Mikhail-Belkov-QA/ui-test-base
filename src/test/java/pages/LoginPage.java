@@ -60,12 +60,16 @@ public class LoginPage {
 
     @Step ("Нажатие на кнопку Продолжить")
     public void clickPasswBtn() {
-       ((JavascriptExecutor) driver).executeScript("arguments[0].click();", passwdClick);
-
+        javaScriptClick(passwdClick);
 
       //  passwdClick.click();
         }
     @Step ("Нажатие на кнопку")
     public void clickLoginBtn() {
-        loginBtn.click(); } }
+        loginBtn.click(); }
+public void javaScriptClick(WebElement element){
+    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+}
+
+}
 
