@@ -16,7 +16,7 @@ public class LoginYandexTest extends BaseTest {
      */
     @Test
     @DisplayName("Мой тест - авторизация аккаунта Яндекс (по почте)")
-   @Step ("Ввод логина")
+    @Step ("Ввод логина")
 
     public void loginTest() {
 

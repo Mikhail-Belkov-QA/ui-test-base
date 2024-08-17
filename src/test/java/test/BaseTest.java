@@ -48,9 +48,9 @@ public class BaseTest {
     /**
      * осуществление выхода из аккаунта с последующим закрытием окна браузера Яндекс
      */
-//    @AfterAll
-//    @Step ("Выход из аккаунта")
-//    public static void tearDown() {
+    @AfterAll
+    @Step ("Выход из аккаунта")
+    public static void tearDown() {
 //        step ("Заходим в iFrame menu", () ->
 //        {     profilePage.entryMenu();});
 //
@@ -60,8 +60,8 @@ public class BaseTest {
 //
 //        step ("Нажимаем на кнопку Выход", () ->
 //        {     profilePage.userLogout();});
-//        driver.quit();
-//    }
+        driver.quit();
+    }
 }
 
 
