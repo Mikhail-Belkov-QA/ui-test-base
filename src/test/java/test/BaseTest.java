@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Tag;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPage;
+import pages.ProfilePage;
 //import pages.ProfilePage;
 
 import java.util.concurrent.TimeUnit;
@@ -21,7 +22,7 @@ public class BaseTest {
 
 
     protected static LoginPage loginPage;
-  //  protected static ProfilePage profilePage;
+    protected static ProfilePage profilePage;
     protected static WebDriver driver;
     /**
      * осуществление первоначальной настройки
@@ -35,7 +36,7 @@ public class BaseTest {
         //создание экземпляра драйвера
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
-     //   profilePage = new ProfilePage(driver);
+        profilePage = new ProfilePage(driver);
         //окно разворачивается на полный экран
         driver.manage().window().maximize();
         //задержка на выполнение теста = 10 сек.
@@ -51,16 +52,7 @@ public class BaseTest {
     @AfterAll
     @Step ("Выход из аккаунта")
     public static void tearDown() {
-//        step ("Заходим в iFrame menu", () ->
-//        {     profilePage.entryMenu();});
-//
-//        step ("Получаем отображаемый логин и сравниваем его с логином из файлов настройки", () ->
-//        {   String user = BaseTest.profilePage.getUserId();
-//            Assertions.assertEquals(test.ConfProperties.getProperty("login"), user); });
-//
-//        step ("Нажимаем на кнопку Выход", () ->
-//        {     profilePage.userLogout();});
-        driver.quit();
+               driver.quit();
     }
 }
 
