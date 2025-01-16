@@ -22,7 +22,7 @@ public class LoginYandexTest extends BaseTest {
 
     public void loginTest() {
 
-        step ("Открываем стартовую страницу", () ->
+        step ("Открываем стартовую страницу_", () ->
         {     driver.get(confProperties.url());});
 
         //Нажатие на кнопку Email
